@@ -4,6 +4,13 @@ on:
     types :
       - opened
   workflow_dispatch :
+  push : 
+    branches :
+      - main
+      - 'dev-*'    # dev-new dev_this-is nre
+      - 'feat/**'  #feat/new feat/mews/nbutton
+    paths-ignore :
+      - '.github/workflows/*'
 jobs:
   deploy:
     runs-on: ubuntu-latest
